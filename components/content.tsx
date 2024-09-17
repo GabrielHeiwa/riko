@@ -15,6 +15,6 @@ export default function Content({ children, ...contentProps }: ContentProps) {
 
 const styles = StyleSheet.create({
     content: {
-        paddingTop: 32
+        paddingVertical: 32
     }
 })

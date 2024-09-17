@@ -7,9 +7,11 @@ import Form from "@/components/form";
 import Input from "@/components/input";
 import InputForm from "@/components/input-form";
 import Label from "@/components/label";
-import { Text } from "react-native";
+import { useRouter } from "expo-router";
 
 export default function Simulate() {
+
+    const router = useRouter();
 
     return <Container>
         <Content>
@@ -30,6 +32,7 @@ export default function Simulate() {
 
                 <InputForm>
                     <Button
+                        onPress={() => router.replace("/stepOne")}
                         variant="primary"
                     >
                         Enviar
