@@ -52,7 +52,7 @@ export default function StepOne() {
                     <Button
                         variant="primary"
                         style={styles.footerButton}
-                        onPress={() => router.replace("/stepTwo")}
+                        onPress={() => router.push("/stepTwo")}
                     >
                         Proximo
                     </Button>

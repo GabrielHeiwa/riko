@@ -13,57 +13,59 @@ export default function StepTwo() {
     const router = useRouter();
 
     return <Container>
-        <View
-            style={styles.body}
-        >
-            <View style={styles.progressContainer}>
-                <View style={styles.progress}></View>
-            </View>
-
+        <Content>
             <View
-                style={styles.textContainer}
+                style={styles.body}
             >
-                <Text
-                    style={styles.title}
-                >
-                    Personalize sua experiencia
-                </Text>
+                <View style={styles.progressContainer}>
+                    <View style={styles.progress}></View>
+                </View>
 
-                <Text
-                    style={styles.subTitle}
+                <View
+                    style={styles.textContainer}
                 >
-                    Informe abaixo as suas taxas de credito e debito.
-                </Text>
+                    <Text
+                        style={styles.title}
+                    >
+                        Personalize sua experiencia
+                    </Text>
+
+                    <Text
+                        style={styles.subTitle}
+                    >
+                        Informe abaixo as suas taxas de credito e debito.
+                    </Text>
+                </View>
+
+                <View
+                    style={styles.inputsContainer}
+                >
+                    <InputForm>
+                        <Label>Qual a sua taxa no credito?</Label>
+                        <Input
+                            placeholder="1.2%"
+                            keyboardType="numbers-and-punctuation"
+                        />
+                    </InputForm>
+
+                    <InputForm>
+                        <Label>Qual a sua taxa no debito?</Label>
+                        <Input
+                            placeholder="2%"
+                            keyboardType="numbers-and-punctuation"
+                        />
+                    </InputForm>
+                </View>
             </View>
 
-            <View
-                style={styles.inputsContainer}
+            <Button
+                variant="primary"
+                style={styles.footerButton}
+                onPress={() => router.push("/welcome")}
             >
-                <InputForm>
-                    <Label>Qual a sua taxa no credito?</Label>
-                    <Input
-                        placeholder="1.2%"
-                        keyboardType="numbers-and-punctuation"
-                    />
-                </InputForm>
-
-                <InputForm>
-                    <Label>Qual a sua taxa no debito?</Label>
-                    <Input
-                        placeholder="2%"
-                        keyboardType="numbers-and-punctuation"
-                    />
-                </InputForm>
-            </View>
-        </View>
-
-        <Button
-            variant="primary"
-            style={styles.footerButton}
-            onPress={() => router.replace("/stepTwo")}
-        >
-            Proximo
-        </Button>
+                Proximo
+            </Button>
+        </Content>
     </Container>
 };
 

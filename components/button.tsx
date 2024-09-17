@@ -12,8 +12,8 @@ export default function Button({ children, variant = "primary", ...buttonProps }
     const style = variants[variant];
 
     return <Pressable
-        style={style.container}
         {...buttonProps}
+        style={{ ...style.container, ...buttonProps.style }}
     >
         <Text
             style={style.text}
