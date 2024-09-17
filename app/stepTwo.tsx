@@ -32,7 +32,7 @@ export default function StepTwo() {
                 <Text
                     style={styles.subTitle}
                 >
-                    Informe as suas taxas.
+                    Informe abaixo as suas taxas de credito e debito.
                 </Text>
             </View>
 
@@ -43,6 +43,7 @@ export default function StepTwo() {
                     <Label>Qual a sua taxa no credito?</Label>
                     <Input
                         placeholder="1.2%"
+                        keyboardType="numbers-and-punctuation"
                     />
                 </InputForm>
 
@@ -50,6 +51,7 @@ export default function StepTwo() {
                     <Label>Qual a sua taxa no debito?</Label>
                     <Input
                         placeholder="2%"
+                        keyboardType="numbers-and-punctuation"
                     />
                 </InputForm>
             </View>
