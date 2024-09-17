@@ -1,3 +1,4 @@
+import { Colors } from "@/constants/Colors";
 import { StyleSheet, TextInput, TextInputBase, TextInputProps } from "react-native";
 
 type Props = TextInputProps;
@@ -16,10 +17,17 @@ export default function Input({ children, ...inputProps }: InputProps) {
 
 const styles = StyleSheet.create({
     input: {
-        paddingVertical: 8,
+        display: "flex",
+        minHeight: 48,
+        paddingVertical: 12,
         paddingHorizontal: 16,
-        borderWidth: 2,
-        borderRadius: 8,
-        borderColor: "#333"
+        gap: 8,
+        borderRadius: 12,
+        borderWidth: 1.5,
+        borderColor: Colors.light.primary,
+
+        color: Colors.light.text,
+        fontSize: 14,
+        lineHeight: 20,
     }
 });

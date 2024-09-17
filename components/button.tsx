@@ -1,3 +1,4 @@
+import { Colors } from "@/constants/Colors";
 import { PressableProps, Text } from "react-native";
 import { Pressable, StyleSheet, View } from "react-native";
 
@@ -26,7 +27,7 @@ const style = StyleSheet.create({
         paddingVertical: 12,
         paddingHorizontal: 20,
         borderRadius: 8,
-        backgroundColor: "#333"
+        backgroundColor: Colors.light.primary
     },
     text: {
         fontSize: 16,

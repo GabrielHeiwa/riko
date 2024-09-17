@@ -1,3 +1,4 @@
+import { Colors } from "@/constants/Colors";
 import { StyleSheet, Text, TextProps } from "react-native";
 
 type Props = TextProps;
@@ -16,7 +17,8 @@ export default function Label({ children, ...labelProps }: LabelProps) {
 
 const styles = StyleSheet.create({
     label: {
-        fontSize: 16,
-        fontWeight: "500"
+        fontSize: 12,
+        fontWeight: "700",
+        color: Colors.light.text
     }
 })

@@ -19,6 +19,6 @@ const styles = StyleSheet.create({
     inputForm: {
         display: "flex",
         flexDirection: "column",
-        rowGap: 4
+        rowGap: 8
     }
 })
