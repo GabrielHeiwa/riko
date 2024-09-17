@@ -2,9 +2,12 @@ import Button from "@/components/button";
 import Container from "@/components/container";
 import Content from "@/components/content";
 import { Colors } from "@/constants/Colors";
+import { useRouter } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
 
 export default function StepOne() {
+    const router = useRouter();
+
     return <Container>
         <Content>
 
@@ -24,7 +27,7 @@ export default function StepOne() {
 
                         <View style={styles.dotList}>
 
-                            <View style={{...styles.dot, ...styles.dotActive}}></View>
+                            <View style={{...styles.dot, ...styles.dotEnable}}></View>
                             <View style={{...styles.dot, ...styles.dotDisable}}></View>
                             <View style={{...styles.dot, ...styles.dotDisable}}></View>
 
@@ -37,13 +40,19 @@ export default function StepOne() {
                         </View>
                         
                         <View>
-
+                            <Text
+                                style={styles.footerSubText}
+                            >
+                                Enjoy these pre-made components and worry only about creating the best product ever.
+                            </Text>
                         </View>
 
                     </View>
 
                     <Button
                         variant="primary"
+                        style={styles.footerButton}
+                        onPress={() => router.replace("/stepTwo")}
                     >
                         Proximo
                     </Button>
@@ -83,13 +92,14 @@ const styles = StyleSheet.create({
     dot: {
         width: 8,
         height: 8,
-        borderRadius: 4
+        borderRadius: 24
     },
-    dotActive: {
+    dotEnable: {
         backgroundColor: Colors.light.primary,
     },
     dotDisable: {
-        backgroundColor: "#1F2024"
+        backgroundColor: "#1F2024",
+        opacity: .1
     },
     footerText: {
         color: "#000",
@@ -98,5 +108,27 @@ const styles = StyleSheet.create({
         fontStyle: "normal",
         fontWeight: "800",
         letterSpacing: .24
+    },
+    footerSubText: { 
+        color: "#71727A",
+        fontFamily: "Inter",
+        fontSize: 12,
+        fontStyle: "normal",
+        fontWeight: 400,
+        lineHeight: 16,
+        letterSpacing: .12,
+        textAlign: "left",
+    },
+    footerButton: {
+        display: "flex",
+        minHeight: 48,
+        paddingVertical: 12,
+        paddingHorizontal: 16,
+        justifyContent: "center",
+        alignItems: "center",
+        gap: 8,
+        alignSelf: "stretch",
+        borderRadius: 12,
+        backgroundColor: Colors.light.primary
     }
 });
