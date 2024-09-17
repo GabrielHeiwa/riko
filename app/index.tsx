@@ -29,7 +29,9 @@ export default function Simulate() {
                 </InputForm>
 
                 <InputForm>
-                    <Button>
+                    <Button
+                        variant="primary"
+                    >
                         Enviar
                     </Button>
                 </InputForm>
