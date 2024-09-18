@@ -13,7 +13,7 @@ export default function Button({ children, variant = "primary", ...buttonProps }
 
     return <Pressable
         {...buttonProps}
-        style={{ ...style.container, ...buttonProps.style }}
+        style={style.container}
     >
         <Text
             style={style.text}
@@ -36,7 +36,7 @@ const primary = StyleSheet.create({
         backgroundColor: Colors.light.primary
     },
     text: {
-        fontFamily: "Inter",
+        // fontFamily: "Inter",
         fontSize: 12,
         fontStyle: "normal",
         fontWeight: "600",
@@ -59,7 +59,7 @@ const secondary = StyleSheet.create({
         borderColor: Colors.light.primary
     },
     text: {
-        fontFamily: "Inter",
+        // fontFamily: "Inter",
         fontSize: 12,
         fontStyle: "normal",
         fontWeight: "600",
@@ -79,7 +79,7 @@ const ghost = StyleSheet.create({
         flexShrink: 0,
     },
     text: {
-        fontFamily: "Inter",
+        // fontFamily: "Inter",
         fontSize: 12,
         fontStyle: "normal",
         fontWeight: "600",

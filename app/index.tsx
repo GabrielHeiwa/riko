@@ -10,7 +10,6 @@ import Label from "@/components/label";
 import { useRouter } from "expo-router";
 
 export default function Simulate() {
-
     const router = useRouter();
 
     return <Container>
@@ -18,21 +17,21 @@ export default function Simulate() {
             <Form>
                 <InputForm>
                     <Label>E-mail</Label>
-                    <Input 
+                    <Input
                         placeholder="Enter your e-mail"
                     />
                 </InputForm>
 
                 <InputForm>
                     <Label>Password</Label>
-                    <Input 
+                    <Input
                         placeholder="Enter your password"
                     />
                 </InputForm>
 
                 <InputForm>
                     <Button
-                        onPress={() => router.replace("/stepOne")}
+                        onPress={() => router.push("/stepOne")}
                         variant="primary"
                     >
                         Enviar

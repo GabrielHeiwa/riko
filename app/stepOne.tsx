@@ -10,7 +10,6 @@ export default function StepOne() {
 
     return <Container>
         <Content>
-
             <View
                 style={styles.container}
             >
@@ -58,16 +57,12 @@ export default function StepOne() {
                     </Button>
                 </View>
             </View>
-
-
         </Content>
     </Container>
 };
 
 const styles = StyleSheet.create({
     container: {
-        // backgroundColor: Colors.light.primary,
-        // flex: 1,
         width: "100%",
         height: "100%"
     },
@@ -103,7 +98,6 @@ const styles = StyleSheet.create({
     },
     footerText: {
         color: "#000",
-        fontFamily: "Inter",
         fontSize: 24,
         fontStyle: "normal",
         fontWeight: "800",
@@ -111,10 +105,9 @@ const styles = StyleSheet.create({
     },
     footerSubText: { 
         color: "#71727A",
-        fontFamily: "Inter",
         fontSize: 12,
         fontStyle: "normal",
-        fontWeight: 400,
+        fontWeight: "400",
         lineHeight: 16,
         letterSpacing: .12,
         textAlign: "left",
